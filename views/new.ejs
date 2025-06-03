@@ -1,0 +1,15 @@
+<%- include ("partials/header.ejs") %>
+ <h1>Proceed here with your new post. </h1>
+    <form action="/submit" method="POST">
+     <label for ="title">Title of post: </label>
+     <input type="text" name="title" required>
+
+     <br/>
+     <br/>
+
+     <label for="content">Write down your thoughts here:</label>
+     <input type="text" name="content" required>
+
+     <input type="submit" value="Submit">
+
+    </form>

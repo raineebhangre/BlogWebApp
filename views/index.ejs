@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rainee's Blogs</title>
+    <title>Document</title>
 </head>
 <body>
-    
+    <%- include ("partials/header.ejs") %>
+    <h1> Welcome to my blogs !</h1>
+
+    <% if (locals.article1) { %>
+    <h2>Here are your posts: </h2>
+     <% for (var i=0;i<article1.length;i++) { %>
+        <li>
+            <a href="/posts/<%- article1[i] %>" ><%- article1[i] %></a>
+        </li>
+      <% } %>
+
+    <% } else { %>
+        <h2>No posts yet! Create now !</h2>
+    <% } %>
 </body>
 </html>
+    
+
