@@ -13,7 +13,13 @@
     <h2>Here are your posts: </h2>
      <% for (var i=0;i<article1.length;i++) { %>
         <li>
-            <a href="/posts/<%- article1[i] %>" ><%- article1[i] %></a>
+            <a href="/posts/<%= article1[i].title %>" ><%= article1[i].title %></a>
+            <form action="/delete/<%= article1[i].title %>" method="POST"" style="display:inline">
+                <input type="hidden" name="title" value="<%= article1[i].title %>">
+                <button type="submit">Delete</button> 
+            </form>
+            <br/>
+            <br/>
         </li>
       <% } %>
 
