@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include ("partials/header.ejs") %>
+    <h3>Edit your post <%= title %> here </h3>
+    <form action="/edit/<%= title %>" method="POST">
+        <label for="title">Title of post: </label>
+        <input type="text" name="title" value="<%= title %>">
+        <br/>
+        <br/>
+        <label for="content">Write down your thoughts here:</label>
+        <input type="text" name="content" value="<%= content %>">
+        <br/>
+        <br/>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
